@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap');
+
+body {font-family:Lato;
+color: #777777;
+}
+#hero-image { box-sizing: content-box;
+  height: 500px;
+  width: 100%;
+  background:url("https://i.imgur.com/sJspByR.jpg") no-repeat center center;
+  animation-name: hero-zoom;
+  animation-duration: 7s;
+  animation-fill-mode: forwards;
+
+}
+
+
+*{
+  margin: 0;
+padding: 0;
+border: 0;
+} 
+
+h2 {
+  font-family: Oswald;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #555555;
+}
+
+#logo{
+  float: left;
+  font-size: 120%;
+  margin-left: 20px;
+  max-width: 100%;
+  max-height: 100%;
+}
+#logo,#menu 
+{
+  line-height: 75px;
+}
+#menu{
+  font-size: 110%;
+  list-style-type: NONE;
+  letter-spacing: 4px;
+}
+/* bruttacopia #menu li {float : right;
+margin: 30px;
+Sarebbe sbagliato perché inverte l'ordine della lista in HTML nel Layout del sito.
+O riscrivo tutta la lista da capo, ma col testo invertito, o faccio come sotto.
+
+}*/
+#menu li {text-align: right;
+display: inline;
+margin-right: 30px; 
+}
+#menu a{ text-decoration: none;
+color: inherit;
+}
+
+#menu a:hover {
+   border-bottom: 1px solid #777777;
+
+} 
+
+.active{
+  border-bottom: 1px solid #777777;
+  
+}
+
+ #hero-outer{ height: 500px;
+width: 100%;
+overflow: hidden;
+position: relative;
+}
+
+@keyframes hero-zoom{
+  from {
+    transform: scale(1);
+  }
+  to{
+    transform: scale(1.1);
+  }
+}
+
+#cover-text,#cover-text h3{
+  color: #ffffff;
+}
+#cover-text{
+  font-size: 130%;
+  font-family: Oswald;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+
+  width: 300px;
+  height: 200px;
+  
+  padding-top: 40px;
+  padding-left: 10px;
+  
+  background-color: rgba(241, 109, 107, .7);
+  
+  bottom: 30px;
+  right: 150px;
+  position: absolute;
+}
+
+#club-ethos{
+  height: 600px;
+}
+#left-about{
+  padding-top: 30px;
+  width: 33%;
+  float: left;
+}
+#right-about{
+  padding-top: 30px;
+  width:33%;
+  float: right;
+}
+#center-about{width: 33%;
+margin: 0 auto; /*Per centrare l'oggetto in automatico*/
+
+}
+
+.left-about-heading{
+  width: 50%;
+  float: right;
+  line-height: 20px;
+  clear: both;
+  margin-bottom: 50px;
+}
+hr{
+  border-top: 1px solid #777777;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.right-about-heading{ 
+  width: 50%;
+line-height: 20px;
+float:left;
+clear: both;
+margin-bottom: 50px;
+
+}
+.right-about-heading h2{
+  text-align: right;
+}
+#welcome{
+  text-align: center;
+  margin: 20px 0;
+  font-size: 280%;
+}
+
+#circle-container{
+  width: 300px;
+  height: 300px;
+  padding: 30px;
+  border-style: solid;
+  border-color:  #cccccc;
+  border-width: 1px;
+  border-radius: 50%;
+  margin: 0 auto;
+  
+}
+#circle-cover-bg{
+background-size: contain;
+  background: url("https://i.imgur.com/U03NqNI.png") no-repeat center center ;
+  height: 100%;
+  border-radius: 50%;
+}
+
+  
+   
+  /*
+  clip: rect(110px, 160px, 170px, 60px); 
+  /* values describe a top/left point and bottom/right point */
+
+ /* clip-path: inset(10px 20px 30px 40px); /* or "none" */
+  /* values are from-top, from-right, from-bottom, from-left */
+
+#times{
+  background-image: url("https://i.imgur.com/8eJ0cXd.jpg");
+  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: absolute;
+  margin: 0 auto;
+  height: auto;
+  width: 90%;
+  overflow: hidden;
+  
+}
+#times div{
+  color: #fafafa;
+  background-color: rgba(10, 96, 255, 0.356);
+  width: 32%;
+  height: 300px;
+  float: left;
+  padding: 30px 0 0 10px;
+  text-align: center;
+  margin: 2px;
+}
+.social-networks{
+  text-align: center;
+}
+.social-networks li{
+  display: inline;
+}
+
+.social-networks i {
+  font-size: 200%;
+  margin-right: 1%;
+  padding: 5%;
+  color: #777777;
+}
+
+@media screen and (max-width: 1393px){
+  #club-ethos{ 
+    width: 65%;
+    height: 1200px;
+    margin: 0 auto;
+    }
+#welcome{
+  padding: 30px 0;
+  margin-top: 0;
+}
+#left-about,#right-about{
+  width: 100%;
+  float: left;
+  padding: 0;
+}
+#center-about{
+  clear: both;
+  width: 100%;
+  float: left;
+  padding: 0;
+
+}
+  
+
+hr{
+  display: none;
+}
+#times div{
+  width: 100%;
+  height: 150%;
+  clear: both;
+  border-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: #fff;
+  padding: 0px;
+}
+
+@media screen and (max-width:943px){
+
+#menu{
+    clear: left;
+    float: left;
+    margin-left: 30px;
+    margin-bottom: 20px;
+    line-height: 25px,
+  }
+
+#cover-text{
+  left: 0px;
+}
+
+#club-ethos{
+  width: 90%;
+  height: 1200px; 
+  margin: 0 auto;
+}
+.left-about-heading, .right-about-heading{ 
+  width: inherit;
+}
+.left-about-heading h2, .right-about-heading h2{
+width: 100%;
+text-align: center;
+}
+
+.left-about-heading p, .right-about-heading p{
+text-align: center;
+padding: 0 20px 0 20px;
+}
+}
+
+/*form section, iscrizione */
+.form-section {
+    clear: left;
+    background: url("https://i.imgur.com/QYlKjg9.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 900px;
+}
+.signup-form{
+  margin-top: 150px;
+  color: #fff;
+  background-color: rgba(60 , 60, 60, 0.6);
+  max-width: 400px;
+  position: absolute;
+  left: 10%;
+  padding:30px;
+}
+.signup-form h2{
+  color: #fafafa;
+  margin-bottom: 20px;
+}
+.text-input{
+  background:transparent;
+  color: #fafafa;
+  width: 100%;
+  height: 25px;
+  margin: 5px 0 20px 0;
+  border: 1px solid #fafafa;
+  border-radius: 2px;
+}
+.text-input:hover {
+  border-color: #f16c6b;
+}
+.join-button{
+  margin-top: 20px;
+  border-radius: 2px;
+  padding: 15px 32px 15px 32px;
+  text-align: center;
+  font-size: 100%;
+  background-color: #f16c6b;
+  color: #fafafa;
+  display: block;
+
+}
+.join-button:hover{ 
+  background-color: #fafafa;
+  color: #f16c6b;
+}
+/*form */

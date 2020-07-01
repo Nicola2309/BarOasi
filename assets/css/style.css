@@ -3,10 +3,12 @@
 body {font-family:Lato;
 color: #777777;
 }
-#hero-image { box-sizing: content-box;
+
+#hero-image { 
+  box-sizing: content-box;
   height: 500px;
   width: 100%;
-  background:url("https://i.imgur.com/sJspByR.jpg") no-repeat center center;
+  background-image: url ('..assets/img/wonderful-ice.jpg') no-repeat center center;
   animation-name: hero-zoom;
   animation-duration: 7s;
   animation-fill-mode: forwards;
@@ -14,8 +16,8 @@ color: #777777;
 }
 
 
-*{
-  margin: 0;
+* {
+margin: 0;
 padding: 0;
 border: 0;
 } 
@@ -27,17 +29,18 @@ h2 {
   color: #555555;
 }
 
-#logo{
+#logo {
   float: left;
   font-size: 120%;
   margin-left: 20px;
   max-width: 100%;
   max-height: 100%;
 }
-#logo,#menu 
-{
+
+#logo,#menu {
   line-height: 75px;
 }
+
 #menu{
   font-size: 110%;
   list-style-type: NONE;
@@ -285,7 +288,7 @@ padding: 0 20px 0 20px;
 }
 }
 
-/*form section, iscrizione */
+/*----------------------------------------------form section, iscrizione */
 .form-section {
     clear: left;
     background: url("https://i.imgur.com/QYlKjg9.jpg");
@@ -333,4 +336,17 @@ padding: 0 20px 0 20px;
   background-color: #fafafa;
   color: #f16c6b;
 }
-/*form */
+/*----------------------------------------form */
+
+
+/*--------------------------------------- Awesome Cream 1 */
+
+position: absolute;
+left: 29.33%;
+right: 23.47%;
+top: 88.92%;
+bottom: -2.46%;
+
+background: url(Ice Pussy.png);
+border-radius: 299px;
+transform: matrix(0, -1, -1, 0, 0, 0);

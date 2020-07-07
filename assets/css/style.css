@@ -1,20 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Oswald:wght@500&display=swap');
 
 body {font-family:Lato;
 color: #777777;
 }
 
 #hero-image { 
+  display: block;
   box-sizing: content-box;
   height: 500px;
   width: 100%;
-  background-image: url ('..assets/img/wonderful-ice.jpg') no-repeat center center;
+  background-size: contain;
+  background-image: url('../img/wonderful-ice.jpg');
+  background-repeat: no-repeat;
   animation-name: hero-zoom;
   animation-duration: 7s;
   animation-fill-mode: forwards;
-
 }
-
+div img{
+    object-fit: contain;
+}
 
 * {
 margin: 0;
@@ -46,17 +51,19 @@ h2 {
   list-style-type: NONE;
   letter-spacing: 4px;
 }
+
 /* bruttacopia #menu li {float : right;
 margin: 30px;
 Sarebbe sbagliato perché inverte l'ordine della lista in HTML nel Layout del sito.
-O riscrivo tutta la lista da capo, ma col testo invertito, o faccio come sotto.
+O riscrivo tutta la lista da capo, ma col testo invertito, o faccio come sotto.*/
 
-}*/
-#menu li {text-align: right;
+#menu li {
+text-align: right;
 display: inline;
 margin-right: 30px; 
 }
-#menu a{ text-decoration: none;
+#menu a{ 
+text-decoration: none;
 color: inherit;
 }
 
@@ -70,7 +77,8 @@ color: inherit;
   
 }
 
- #hero-outer{ height: 500px;
+ #hero-outer{ 
+height: 500px;
 width: 100%;
 overflow: hidden;
 position: relative;
@@ -84,6 +92,21 @@ position: relative;
     transform: scale(1.1);
   }
 }
+/*---------------------------------------------------Text*/
+
+#pres-par {
+    text-align: center;
+    font-family: Oswald,sans-serif;
+    padding: 25px  10px;
+    letter-spacing: 0px;
+    text-transform: none;
+}
+.pres-chi {
+    font-family: Montserrat, sans-serif;
+    padding: 0 20px;
+    text-align: center;
+    font-weight: 500;
+}
 
 #cover-text,#cover-text h3{
   color: #ffffff;
@@ -93,23 +116,18 @@ position: relative;
   font-family: Oswald;
   text-transform: uppercase;
   letter-spacing: 4px;
-
   width: 300px;
   height: 200px;
-  
   padding-top: 40px;
   padding-left: 10px;
-  
   background-color: rgba(241, 109, 107, .7);
-  
   bottom: 30px;
   right: 150px;
   position: absolute;
 }
+/*----------------------------------------------------------Icons&Icons*/
 
-#club-ethos{
-  height: 600px;
-}
+/*
 #left-about{
   padding-top: 30px;
   width: 33%;
@@ -121,8 +139,7 @@ position: relative;
   float: right;
 }
 #center-about{width: 33%;
-margin: 0 auto; /*Per centrare l'oggetto in automatico*/
-
+margin: 0 auto; /*Per centrare l'oggetto in automatico
 }
 
 .left-about-heading{
@@ -132,12 +149,14 @@ margin: 0 auto; /*Per centrare l'oggetto in automatico*/
   clear: both;
   margin-bottom: 50px;
 }
+*/
 hr{
   border-top: 1px solid #777777;
   width: 100%;
   margin: 10px 0;
 }
 
+/*
 .right-about-heading{ 
   width: 50%;
 line-height: 20px;
@@ -149,28 +168,57 @@ margin-bottom: 50px;
 .right-about-heading h2{
   text-align: right;
 }
+*/
+
 #welcome{
   text-align: center;
   margin: 20px 0;
   font-size: 280%;
+  padding: 40px 0 50px 0;
 }
 
 #circle-container{
+    /* Awesome Cream 1 */
+    
+  position: relative;
+  display: inline-block;
   width: 300px;
-  height: 300px;
-  padding: 30px;
+  height: 500px;
+  padding: 2px;
   border-style: solid;
   border-color:  #cccccc;
   border-width: 1px;
+  border-radius: 120px;
+  
+  
+  /*
   border-radius: 50%;
   margin: 0 auto;
+  */ 
+
+
   
 }
 #circle-cover-bg{
-background-size: contain;
-  background: url("https://i.imgur.com/U03NqNI.png") no-repeat center center ;
+  width: 100%;
+  padding: 2px;
+  background-size: cover;
+  background: url('../img/Vipera.png') no-repeat bottom right;
+  border-radius: 120px;
   height: 100%;
-  border-radius: 50%;
+  object-fit: cover;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+
+  filter: FlipH;
+  -ms-filter: "FlipH";
+  background-position-x: -200px;
+  background-position-y: -20px;
+  
+
+ /* border-radius: 50%;*/
 }
 
   
@@ -184,7 +232,6 @@ background-size: contain;
 
 #times{
   background-image: url("https://i.imgur.com/8eJ0cXd.jpg");
-  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: absolute;
@@ -219,11 +266,12 @@ background-size: contain;
 }
 
 @media screen and (max-width: 1393px){
-  #club-ethos{ 
-    width: 65%;
+  /*#club-ethos{ 
+      display: inline-block;
+    position: relative;
     height: 1200px;
     margin: 0 auto;
-    }
+    }*/
 #welcome{
   padding: 30px 0;
   margin-top: 0;
@@ -234,10 +282,16 @@ background-size: contain;
   padding: 0;
 }
 #center-about{
-  clear: both;
   width: 100%;
   float: left;
   padding: 0;
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+
+  filter: FlipH;
+  -ms-filter: "FlipH";
 
 }
   
@@ -255,9 +309,25 @@ hr{
   padding: 0px;
 }
 
-@media screen and (max-width:943px){
+@media(min-width: 992px) {
+         #pres-par,
+         .pres-chi,
+         #club-ethos,
+         #iconicicons{
+       
+        padding-top: 30px;
+        min-height: 120px;
+        margin: 0 auto;
+    
+}  
+}
 
-#menu{
+#hero-image{
+    width: 100%;
+    background-size: cover;
+}
+
+/*#menu{
     clear: left;
     float: left;
     margin-left: 30px;
@@ -285,6 +355,20 @@ text-align: center;
 .left-about-heading p, .right-about-heading p{
 text-align: center;
 padding: 0 20px 0 20px;
+}
+}*/
+
+@media screen and (max-width:600px){
+    
+#hero-image{
+ width: 100%;
+ background-size: contain;
+}
+
+#cover-text{
+  left: 0px;
+  background-position-y: -100px;
+  
 }
 }
 
@@ -336,17 +420,10 @@ padding: 0 20px 0 20px;
   background-color: #fafafa;
   color: #f16c6b;
 }
-/*----------------------------------------form */
 
 
-/*--------------------------------------- Awesome Cream 1 */
+/*------------------------------------------------Bootstrap*/
 
-position: absolute;
-left: 29.33%;
-right: 23.47%;
-top: 88.92%;
-bottom: -2.46%;
-
-background: url(Ice Pussy.png);
-border-radius: 299px;
-transform: matrix(0, -1, -1, 0, 0, 0);
+.my-col{
+    border: 5px solid red;
+}
